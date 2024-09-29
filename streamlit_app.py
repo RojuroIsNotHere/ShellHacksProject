@@ -3,7 +3,7 @@ import streamlit as st
 st.title("My Streamlit App")
 
 # Create a sidebar for navigation
-menu = st.sidebar.selectbox("Select a page:", ["Home", "About", "Health Quotes", "Renter Quotes", "Contact"])
+menu = st.sidebar.selectbox("Select a page:", ["Home", "About", "Health Quotes", "Auto Quotes", "Renter Quotes", "Contact"])
 
 def calculate_health_quote(age, pre_existing, coverage_amount):
     base_rate = 0.05  # Base rate per $1000 coverage
