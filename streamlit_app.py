@@ -18,3 +18,16 @@ elif menu == "Renter Quotes":
     renter_quotes.display()  # Display the renter quotes page
 elif menu == "Contact":
     contact_us.display()
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1>Chat with our AI Bot</h1>
+    <iframe src="https://quotemates.streamlit.app" width="100%" height="700px" frameborder="0"></iframe>
+</body>
+</html>
