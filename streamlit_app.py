@@ -15,6 +15,19 @@ def calculate_health_quote(age, pre_existing, coverage_amount):
     total_rate = base_rate + (age_factor * (age - 18))  # Start charging from age 18
     return coverage_amount * total_rate
 
+def calcRentEstimate(Type, prop, cov):
+        rate = 0.0
+        if Type == "Apartment":
+            rate = 0.03
+        if Type == "Condo":
+            rate = 0.025
+        if Type == "Townhouse":
+            rate = 0.06
+        if Type == "House":
+            rate = 0.09
+        estimate = rate * cov * (prop / 0.6) 
+        return estimate
+
 # Home page
 if menu == "Home":
     st.subheader("Welcome to the Home Page")
@@ -65,18 +78,3 @@ elif menu == "Contact":
     
     if st.button("Submit"):
         st.success("Message sent!")
-
-def calcRentEstimate(Type, prop, cov):
-        rate = 0.0
-        if Type == "Apartment":
-            rate = 0.03
-        if Type == "Condo":
-            rate = 0.025
-        if Type == "Townhouse":
-            rate = 0.06
-        if Type == "House":
-            rate = 0.09
-        estimate = rate * cov * (prop / 0.6) 
-        return estimate
-
-
