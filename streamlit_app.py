@@ -4,7 +4,8 @@ import home, about, health_quotes, auto_quotes, renter_quotes, contact_us, chatb
 
 # Create a custom sidebar for navigation
 menu = st.sidebar.selectbox("Create a quote:", ["Home","About Us","Health Quotes", "Auto Quotes", "Renter Quotes", "Contact Us"])
-st.sidebar.chatbot.display()
+with st.sidebar:
+    chatbot.display()
 
 # Render the corresponding page based on user selection
 if menu == "Home":
