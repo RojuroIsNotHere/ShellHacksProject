@@ -2,16 +2,19 @@ import streamlit as st
 
 def display():
     
-  with st.form("Email Form"):
+    st.subheader("Contact Us")
+    st.write("If you have any questions about our service, feel free to let us know.")
     
-    fullName = st.text_input(label="Full Name", placeholder = "Please enter your full name")
+    with st.form("Email Form"):
     
-    email = st.text_input(label="Email Address", placeholder = "Please enter your email address")
+        fullName = st.text_input(label="Full Name", placeholder = "Please enter your full name")
     
-    text = st.text_area(label="Comments", placeholder = "Please enter your comments")
+        email = st.text_input(label="Email Address", placeholder = "Please enter your email address")
     
-    submit_res = st.form_submit_button(label="Send")
+        text = st.text_area(label="Comments", placeholder = "Please enter your comments")
+    
+        submit_res = st.form_submit_button(label="Send")
 
-    if submit_res:
+        if submit_res:
 
-      st.success("Thank you! We will get back to you ASAP!")
+          st.success("Thank you! We will get back to you ASAP!")
