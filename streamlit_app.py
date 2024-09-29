@@ -86,7 +86,8 @@ elif menu == "Renter Quotes":
     
     if st.button("Submit"):
         calc = calcRentEstimate(rental_type, est_prop_val, desired_coverage) 
-        st.success(f"{calc}")
+        st.success(f"${calc} per month!")
+        st.balloons()
 
 # Contact page
 elif menu == "Contact":
