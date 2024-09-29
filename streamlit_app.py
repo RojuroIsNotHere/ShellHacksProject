@@ -1,6 +1,6 @@
 import streamlit as st
 # Import individual pages
-import home, about, health_quotes, auto_quotes, renter_quotes
+import home, about, health_quotes, auto_quotes, renter_quotes, contact_us, hackathonTest
 
 # Create a custom sidebar for navigation
 menu = st.sidebar.selectbox("Create a quote:", ["Home","About Us","Health Quotes", "Auto Quotes", "Renter Quotes", "Contact Us"])
