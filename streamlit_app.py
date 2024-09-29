@@ -5,6 +5,16 @@ st.title("My Streamlit App")
 # Create a sidebar for navigation
 menu = st.sidebar.selectbox("Select a page:", ["Home", "About", "Health Quotes", "Renter Quotes", "Contact"])
 
+def calculate_health_quote(age, pre_existing, coverage_amount):
+    base_rate = 0.05  # Base rate per $1000 coverage
+    age_factor = 0.01  # Additional charge per year of age
+    if pre_existing:
+        base_rate += 0.02  # Additional charge for pre-existing conditions
+
+    # Calculate total rate based on age
+    total_rate = base_rate + (age_factor * (age - 18))  # Start charging from age 18
+    return coverage_amount * total_rate
+
 # Home page
 if menu == "Home":
     st.subheader("Welcome to the Home Page")
@@ -67,13 +77,5 @@ def calcRentEstimate(self, type, prop, cov):
             rate = 0.09
         estimate = rate * cov * (prop / 0.6) 
         return estimate
-def calculate_health_quote(age, pre_existing, coverage_amount):
-    base_rate = 0.05  # Base rate per $1000 coverage
-    age_factor = 0.01  # Additional charge per year of age
-    if pre_existing:
-        base_rate += 0.02  # Additional charge for pre-existing conditions
 
-    # Calculate total rate based on age
-    total_rate = base_rate + (age_factor * (age - 18))  # Start charging from age 18
-    return coverage_amount * total_rate
 
