@@ -53,7 +53,7 @@ def calculate_auto_quote(vehicle_age, vehicle_value, coverage_type, vehicle_type
 def calcRentEstimate(rental_type, est_prop_val, desired_coverage):
     rate = 0.0
     if rental_type == "Apartment":
-        rate = 0.02
+        rate = 0.014
     elif rental_type == "Condo":
         rate = 0.01
     elif rental_type == "Townhouse":
