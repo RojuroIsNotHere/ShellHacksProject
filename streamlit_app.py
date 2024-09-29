@@ -3,7 +3,7 @@ import streamlit as st
 st.title("My Streamlit App")
 
 # Create a sidebar for navigation
-menu = st.sidebar.selectbox("Select a page:", ["Home", "About", "Renters", "Contact"])
+menu = st.sidebar.selectbox("Select a page:", ["Home", "About", "Health Quotes", "Renter Quotes", "Contact"])
 
 # Home page
 if menu == "Home":
@@ -16,7 +16,16 @@ elif menu == "About":
     st.write("This section contains information about the app or the individual.")
 
 # Services page
-elif menu == "Renters":
+# Health Insurance Page
+elif menu == "Health Quotes":
+   st.subheader("Health Insurance Estimate: Express")
+   st.write("Take this quick survey to see your estimate!")
+   age = st.number_input("Enter your age:", min_value=18, max_value=120, value=None)
+   pre_existing = st.checkbox("Do you have any pre-existing medical conditions?")
+   coverage_amount = st.number_input("Enter desired coverage amount ($):", min_value=1000, value=None)
+
+# Renters Insurance Page
+elif menu == "Renter Quotes":
     st.subheader("Renters Insurance Estimate: Express")
     st.write("Take this quick survey to see your estimate!")
 
@@ -55,3 +64,23 @@ def calcRentEstimate(self, type, prop, cov):
             rate = 0.09
         estimate = rate * cov * (prop / 0.6) 
         return estimate
+def calculate_health_quote(age, pre_existing, coverage_amount):
+    base_rate = 0.05  # Base rate per $1000 coverage
+    age_factor = 0.01  # Additional charge per year of age
+    if pre_existing:
+        base_rate += 0.02  # Additional charge for pre-existing conditions
+
+    # Calculate total rate based on age
+    total_rate = base_rate + (age_factor * (age - 18))  # Start charging from age 18
+    return coverage_amount * total_rate
+
+# Submit button to calculate quote
+if st.button("Get Quote"):
+    try:
+        if insurance_type == "Health Insurance":
+            age, pre_existing, coverage_amount = health_inputs
+            quote = calculate_health_quote(age, pre_existing, coverage_amount)
+            st.success(f"Health Insurance Quote: ${quote:.2f}")
+            st.balloons()
+    except Exception as e:
+        st.error(f"An error occurred: {e}")
