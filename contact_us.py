@@ -14,4 +14,4 @@ def display():
 
     if submit_res:
 
-      st.success("Email sent!")
+      st.success("Thank you! We will get back to you ASAP!")
