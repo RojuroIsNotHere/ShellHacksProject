@@ -23,6 +23,9 @@ elif menu == "Health Quotes":
    age = st.number_input("Enter your age:", min_value=18, max_value=120, value=None)
    pre_existing = st.checkbox("Do you have any pre-existing medical conditions?")
    coverage_amount = st.number_input("Enter desired coverage amount ($):", min_value=1000, value=None)
+   quote = calculate_health_quote(age, pre_existing, coverage_amount)
+   st.success(f"Health Insurance Quote: ${quote:.2f}")
+   st.balloons()
 
 # Renters Insurance Page
 elif menu == "Renter Quotes":
@@ -74,13 +77,3 @@ def calculate_health_quote(age, pre_existing, coverage_amount):
     total_rate = base_rate + (age_factor * (age - 18))  # Start charging from age 18
     return coverage_amount * total_rate
 
-# Submit button to calculate quote
-if st.button("Get Quote"):
-    try:
-        if insurance_type == "Health Insurance":
-            age, pre_existing, coverage_amount = health_inputs
-            quote = calculate_health_quote(age, pre_existing, coverage_amount)
-            st.success(f"Health Insurance Quote: ${quote:.2f}")
-            st.balloons()
-    except Exception as e:
-        st.error(f"An error occurred: {e}")
