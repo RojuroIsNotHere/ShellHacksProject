@@ -1,14 +1,22 @@
 # utils/calculations.py
 
-def calculate_health_quote(age, pre_existing, coverage_amount):
+def calculate_health_quote(age, coverage_amount, pre_existing, smoker, quote_frequency):
     base_rate = 0.05  # Base rate per $1000 coverage
     age_factor = 0.01  # Additional charge per year of age
     if pre_existing:
         base_rate += 0.02  # Additional charge for pre-existing conditions
+    if smoker:
+        base_rate += 0.03  # Additional charge for smokers
 
     # Calculate total rate based on age
     total_rate = base_rate + (age_factor * (age - 18))  # Start charging from age 18
-    return coverage_amount * total_rate
+    # Calculate final quote amount (yearly)
+    quote = coverage_amount * total_rate
+
+    if quote_frequency == "Monthly":
+        return quote / 12  # Convert to monthly
+    else:
+        return quote  # Return yearly quote
 
 
 def calculate_auto_quote(vehicle_age, vehicle_value, coverage_type):
