@@ -1,4 +1,5 @@
 import streamlit as st
+import openai
 # Import individual pages
 import home, about, health_quotes, auto_quotes, renter_quotes, contact_us, chatbot
 
