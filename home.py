@@ -3,7 +3,6 @@ import streamlit as st
 
 def display():
     st.title("Welcome to QuoteMates!")
-    st.write("This is the home section where you can provide an overview of your app.")
 
     st.subheader("Features:")
     st.write(
