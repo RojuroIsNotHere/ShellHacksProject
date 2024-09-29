@@ -17,10 +17,4 @@ elif menu == "Auto Quotes":
 elif menu == "Renter Quotes":
     renter_quotes.display()  # Display the renter quotes page
 elif menu == "Contact":
-    st.subheader("Contact Us")
-    name = st.text_input("Your Name")
-    email = st.text_input("Your Email")
-    message = st.text_area("Your Message")
-
-    if st.button("Submit"):
-        st.success("Message sent!")
+    contact_us.display()
