@@ -16,9 +16,16 @@ elif menu == "About":
     st.write("This section contains information about the app or the individual.")
 
 # Services page
-elif menu == "Services":
-    st.subheader("Our Services")
-    st.write("Here you can describe the services offered.")
+elif menu == "Renters":
+    st.subheader("Renters Insurance Estimate: Express")
+    st.write("Take this quick survey to see your estimate!")
+
+    name = st.text_input("Your Name")
+    email = st.text_input("Your Email")
+    address = st.text_input("Your Address")
+    rental_type = st.text_input("Rental Type")
+    est_prop_val = st.text_input("Estimated Value of Personal Property")
+    desired_coverage = st.text_input("Desired Liability Coverage")
 
 # Contact page
 elif menu == "Contact":
