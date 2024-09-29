@@ -66,15 +66,15 @@ elif menu == "Contact":
     if st.button("Submit"):
         st.success("Message sent!")
 
-def calcRentEstimate(self, type, prop, cov):
+def calcRentEstimate(Type, prop, cov):
         rate = 0.0
-        if type == "Apartment":
+        if Type == "Apartment":
             rate = 0.03
-        if type == "Condo":
+        if Type == "Condo":
             rate = 0.025
-        if type == "Townhouse":
+        if Type == "Townhouse":
             rate = 0.06
-        if type == "House":
+        if Type == "House":
             rate = 0.09
         estimate = rate * cov * (prop / 0.6) 
         return estimate
