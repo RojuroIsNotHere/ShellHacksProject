@@ -17,6 +17,6 @@ elif menu == "Auto Quotes":
     auto_quotes.display()  # Display the auto quotes page
 elif menu == "Renter Quotes":
     renter_quotes.display()  # Display the renter quotes page
-elif menu == "Contact":
+elif menu == "Contact Us":
     contact_us.display()
 
