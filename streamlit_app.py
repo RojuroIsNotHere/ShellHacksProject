@@ -31,4 +31,3 @@ elif menu == "Contact":
     
     if st.button("Submit"):
         st.success("Message sent!")
-)
