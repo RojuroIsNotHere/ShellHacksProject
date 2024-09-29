@@ -30,17 +30,17 @@ elif menu == "Renters":
     if st.button("Submit"):
         rate = 0.0
         if rental_type == "Apartment":
-            rate = 0.03
+            self.rate = 0.03
         if rental_type == "Condo":
-            rate = 0.025
+            self.rate = 0.025
         if rental_type == "Townhouse":
-            rate = 0.06
+            self.rate = 0.06
         if rental_type == "House":
-            rate = 0.09
-        estimate = rate * desired_coverage 
-        estimate = estimate * est_prop_val
-        estimate = estimate / 0.6 
-        st.success(f"{estimate}")
+            self.rate = 0.09
+        estimate = self.rate * self.desired_coverage 
+        estimate = self.estimate * self.est_prop_val
+        estimate = self.estimate / 0.6 
+        st.success(f"{self.estimate}")
 
 # Contact page
 elif menu == "Contact":
