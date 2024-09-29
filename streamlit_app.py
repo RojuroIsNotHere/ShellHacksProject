@@ -24,6 +24,19 @@ def calculate_auto_quote(vehicle_age, vehicle_value, coverage_type):
         base_rate += 0.015  # Additional charge for collision coverage
     return vehicle_value * base_rate
 
+def calcRentEstimate(rental_type, est_prop_val, desired_coverage):
+        rate = 0.0
+        if rental_type == "Apartment":
+            rate = 0.03
+        if rental_type == "Condo":
+            rate = 0.025
+        if rental_type == "Townhouse":
+            rate = 0.06
+        if rental_type == "House":
+            rate = 0.09
+        return estimate = rate * desired_coverage * ( est_prop_val / 0.6 ) 
+
+
 # Home page
 if menu == "Home":
     st.subheader("Welcome to the Home Page")
@@ -86,18 +99,4 @@ elif menu == "Contact":
     
     if st.button("Submit"):
         st.success("Message sent!")
-
-def calcRentEstimate(self, type, prop, cov):
-        rate = 0.0
-        if type == "Apartment":
-            rate = 0.03
-        if type == "Condo":
-            rate = 0.025
-        if type == "Townhouse":
-            rate = 0.06
-        if type == "House":
-            rate = 0.09
-        estimate = rate * cov * (prop / 0.6) 
-        return estimate
-
 
