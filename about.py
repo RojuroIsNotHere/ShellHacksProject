@@ -11,7 +11,7 @@ def display():
     
     st.subheader("Team Members:")
     team_members = [
-        "1. ",
+        "1. Briana Monroy",
         "2. Giordano Galarce",
         "3. Kristian Valuyskiy"
     ]
