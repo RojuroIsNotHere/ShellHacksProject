@@ -18,4 +18,6 @@ elif menu == "Renter Quotes":
     renter_quotes.display()  # Display the renter quotes page
 elif menu == "Contact":
     contact_us.display()
+elif menu == "Chatbot":
+    chatbot.display()
 
