@@ -27,18 +27,22 @@ elif menu == "Renters":
     est_prop_val = st.text_input("Estimated Value of Personal Property")
     desired_coverage = st.text_input("Desired Liability Coverage")
 
-    if st.button("Submit"):
+    def calcRentEstimate(self, type, prop, cov):
         rate = 0.0
-        if rental_type == "Apartment":
+        if type == "Apartment":
             rate = 0.03
-        if rental_type == "Condo":
+        if type == "Condo":
             rate = 0.025
-        if rental_type == "Townhouse":
+        if type == "Townhouse":
             rate = 0.06
-        if rental_type == "House":
+        if type == "House":
             rate = 0.09
-        estimate = rate * desired_coverage * est_prop_val / 0.6 
-        st.success(f"{estimate}")
+        estimate = rate * cov * (prop / 0.6) 
+        return estimate
+    
+    if st.button("Submit"):
+        calc = calcRentEstimate(rental_type, est_prop_val, desired_coverage) 
+        st.success(f"{calc}")
 
 # Contact page
 elif menu == "Contact":
