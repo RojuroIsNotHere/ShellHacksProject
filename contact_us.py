@@ -47,4 +47,4 @@ def display():
 
       message = extra_info + text
     
-      send_email(sender="quotematescom@gmail", password="#123098Wow", reciever= email, smtp_server= "smtp.gmail.com", smtp_port= 587, email_message= message, subject= "Test Email for hackathon")
+      send_email(sender="quotematescom@gmail", password="#123098Wow", reciever=email, smtp_server="smtp.gmail.com", smtp_port=587, email_message=message, subject="Test Email for hackathon")
