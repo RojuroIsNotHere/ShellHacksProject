@@ -34,7 +34,7 @@ def calcRentEstimate(rental_type, est_prop_val, desired_coverage):
             rate = 0.06
         if rental_type == "House":
             rate = 0.09
-        return estimate = rate * desired_coverage * ( est_prop_val / 0.6 ) 
+        return rate * desired_coverage * ( est_prop_val / 0.6 ) 
 
 
 # Home page
