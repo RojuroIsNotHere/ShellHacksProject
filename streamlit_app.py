@@ -5,7 +5,10 @@ import home, about, health_quotes, auto_quotes, renter_quotes, contact_us, chatb
 # Create a custom sidebar for navigation
 menu = st.sidebar.selectbox("Create a quote:", ["Home","About Us","Health Quotes", "Auto Quotes", "Renter Quotes", "Contact Us"])
 with st.sidebar:
-    chatbot.get_chatbot_response()
+    add_radio = st.radio(
+        "Choose a shipping method",
+        ("Standard (5-15 days)", "Express (2-5 days)")
+    )
 
 # Render the corresponding page based on user selection
 if menu == "Home":
