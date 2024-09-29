@@ -23,7 +23,7 @@ elif menu == "Renters":
     name = st.text_input("Your Name")
     email = st.text_input("Your Email")
     address = st.text_input("Your Address")
-    rental_type = st.text_input("Rental Type")
+    rental_type = st.selectbox("Rental Type", [Apartment, Condo, Townhouse, House])
     est_prop_val = st.text_input("Estimated Value of Personal Property")
     desired_coverage = st.text_input("Desired Liability Coverage")
 
