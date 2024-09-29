@@ -55,7 +55,7 @@ elif menu == "Auto Quotes":
    car_model_year = st.number_input("Enter your car's model year:", min_value=1900, max_value=2025)
    coverage_type = st.selectbox("Select the type of coverage:", ["Liability", "Comprehensive", "Collision"])
    if st.button("Get Auto Quote"):
-        quote = calculate_health_quote(age, pre_existing, coverage_amount)
+        quote = calculate_auto_quote(vehicle_age, vehicle_value, coverage_type)
         st.success(f"Auto Insurance Quote: ${quote:.2f}")
         st.balloons()
 
