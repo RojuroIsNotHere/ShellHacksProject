@@ -10,7 +10,7 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
   message['To'] = Header(receiver)
   message['From'] = Header(sender)
   message['Subject'] = Header(subject)
-  message.attach(MIMEtext(email_message), 'plain', 'utf-8')
+  message.attach(MIMEText(email_message), 'plain', 'utf-8')
 
   server = smtplib.SMTP(smtp_server, smtp_port)
   server.starttls()
