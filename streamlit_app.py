@@ -27,6 +27,19 @@ elif menu == "Renters":
     est_prop_val = st.text_input("Estimated Value of Personal Property")
     desired_coverage = st.text_input("Desired Liability Coverage")
 
+    if st.button("Submit"):
+        rate = 0.0
+        if rental_type == "Apartment"
+            rate = 0.03
+        if rental_type == "Condo"
+            rate = 0.025
+        if rental_type == "Townhouse"
+            rate = 0.06
+        if rental_type == "House"
+            rate = 0.09
+        estimate = rate * desired_coverage * ( est_prop_val / 0.6 )
+        st.success(f"{estimate}")
+
 # Contact page
 elif menu == "Contact":
     st.subheader("Contact Us")
