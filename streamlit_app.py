@@ -37,10 +37,8 @@ elif menu == "Renters":
             rate = 0.06
         if rental_type == "House":
             rate = 0.09
-        estimate = self.rate * self.desired_coverage 
-        estimate = self.estimate * self.est_prop_val
-        estimate = self.estimate / 0.6 
-        st.success(f"{self.estimate}")
+        estimate = rate * desired_coverage * est_prop_val / 0.6 
+        st.success(f"{estimate}")
 
 # Contact page
 elif menu == "Contact":
