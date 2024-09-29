@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 
 # Set your OpenAI API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 # Function to get a response from the OpenAI GPT model
 def get_chatbot_response(user_input):
