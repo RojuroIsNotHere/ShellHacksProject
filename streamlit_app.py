@@ -81,8 +81,8 @@ elif menu == "Renter Quotes":
     email = st.text_input("Your Email")
     address = st.text_input("Your Address")
     rental_type = st.selectbox("Rental Type", ["Apartment", "Condo", "Townhouse", "House"])
-    est_prop_val = st.text_input("Estimated Value of Personal Property")
-    desired_coverage = st.text_input("Desired Liability Coverage")
+    est_prop_val = st.number_input("Estimated Value of Personal Property")
+    desired_coverage = st.number_input("Desired Liability Coverage")
     
     if st.button("Submit"):
         calc = calcRentEstimate(rental_type, est_prop_val, desired_coverage) 
