@@ -1,5 +1,5 @@
 import streamlit as st
-from calculations, import calculate_auto_quote  # Import the calculation function
+from calculations import calculate_auto_quote  # Import the calculation function
 
 def display():
     st.subheader("Auto Insurance Estimate: Express")
