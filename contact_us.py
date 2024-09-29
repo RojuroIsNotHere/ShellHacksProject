@@ -21,8 +21,6 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
   server.quit()
 
 def display():
-
-  message = "I am coming from Streamlit"
     
   with st.form("Email Form"):
     
@@ -34,7 +32,7 @@ def display():
     
     submit_res = st.form_submit_button(label="Send")
 
-    if sub_res:
+    if submit_res:
 
       extra_info = """
       -----------------------------------------------
