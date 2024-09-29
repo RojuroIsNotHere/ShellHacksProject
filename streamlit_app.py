@@ -3,7 +3,7 @@ import streamlit as st
 st.title("My Streamlit App")
 
 # Create a sidebar for navigation
-menu = st.sidebar.selectbox("Select a page:", ["Home", "About", "Services", "Contact"])
+menu = st.sidebar.selectbox("Select a page:", ["Home", "About", "Renters", "Contact"])
 
 # Home page
 if menu == "Home":
